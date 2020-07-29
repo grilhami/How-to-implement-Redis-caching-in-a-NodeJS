@@ -1,0 +1,12 @@
+  
+{
+    "db": {
+      "username": "root",
+      "password": "password",
+      "database": "database",
+      "host": "127.0.0.1",
+      "dialect": "sqlite",
+      "storage": "db.sqlite",
+      "connectTimeout": 60000
+    }
+  }
