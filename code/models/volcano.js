@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         name: DataTypes.STRING,
         shape: DataTypes.STRING,
         elevation: DataTypes.INTEGER,
-        shape: DataTypes.STRING,
+        lastEruption: DataTypes.STRING,
       },
       {}
     );
