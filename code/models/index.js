@@ -1,12 +1,11 @@
-"use strict";
+const Sequelize = require("sequelize")
 
-const fs = require("fs");
-const path = require("path");
-const Sequelize = require("sequelize");
-const basename = path.basename(__filename);
-const config = require(__dirname + "/../config/config.json")["db"];
+const config = require(__dirname + "/../config/config.json")["db"]
 const db = {};
 
+const { volcano } = require("./volcano")
+
+db['volcano'] = volcano
 
 sequelize = new Sequelize(
 config.database,
@@ -15,10 +14,9 @@ config.password,
 config
 );
 
+db.sequelize = sequelize
+db.Sequelize = Sequelize
 
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
+sequelize.sync()
 
-sequelize.sync();
-
-module.exports = db;
+module.exports = db
