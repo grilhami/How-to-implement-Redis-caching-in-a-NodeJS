@@ -1,7 +1,7 @@
-module.exports = {
-    createProduct: (req, res) => {
-        const { name, shape, elevation, lastEruption} = req.body;
+// import controllers here
+const volcanoC = require('./volcanoController');
 
-        
-    }
+// export controllers here
+module.exports = {
+    volcanoC
 };
