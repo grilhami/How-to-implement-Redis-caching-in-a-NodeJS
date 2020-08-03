@@ -2,7 +2,7 @@ const { volcano } = require('../models');
 
 
 module.exports = {
-    createProduct: (req, res) => {
+    createVolcano: (req, res) => {
         const { name, shape, elevation, lastEruption} = req.body;
 
         volcano.create(
