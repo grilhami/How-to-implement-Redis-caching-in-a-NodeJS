@@ -3,9 +3,7 @@ const redis = require("redis");
 const client = redis.createClient(6379);
 
 exports.getVolcanoCache = (req, res, next) => {
-    const { volcanoId } = req.query;
-
-    client.get(volcanoId, (err, data) =>{
+    client.get("volcanos", (err, data) =>{
         if (err) {
             next()
         };
