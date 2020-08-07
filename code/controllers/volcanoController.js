@@ -1,10 +1,10 @@
-const { volcano } = require('../models');
+const { eruption } = require('../models');
 
 
 module.exports = {
     getVolcanos: (req, res) => {
-        volcano.findAll().then(result => 
-            res.status(200).send({message: "Get Volcanos", result})
+        eruption.findAll().then(result => 
+            res.status(200).send({message: "Erruptions", result})
         ).catch(err => 
             res.status(500).send({message: "Server Error", error: err.message})
         )

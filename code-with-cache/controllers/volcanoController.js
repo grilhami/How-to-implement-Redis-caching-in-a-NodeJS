@@ -1,12 +1,12 @@
 const { volcano } = require('../models');
 
-const { redisClient } = require('../middleware/cacheMiddleware');
+const { redisClient } = require('../middlewares/cacheMiddleware');
 
 module.exports = {
     getVolcanos: (req, res) => {
         volcano.findAll().then(result => {
             const data = JSON.stringify(result)
-            redisClient.setex(userId, 5, data)
+            redisClient.setex("volcanos", 5, data)
             return res.status(200).send({message: "Get Volcanos", result})
         }
             
