@@ -8,9 +8,9 @@ const cors = require("cors");
 app.use(bodyParser.json());
 app.use(cors());
 
-const { volcanoRoute } = require("./routes");
+const { eruptionRoute} = require("./routes");
 
-app.use("/volcanos", volcanoRoute);
+app.use("/eruptions", eruptionRoute);
 
 app.get("/", (req, res) => {
   res.send(

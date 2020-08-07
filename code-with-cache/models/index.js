@@ -10,7 +10,7 @@ config.password,
 config
 );
 
-db['volcano'] = require(path.join(__dirname, "volcano.js"))(sequelize, Sequelize)
+db['eruption'] = require(path.join(__dirname, "eruption.js"))(sequelize, Sequelize)
 
 db.sequelize = sequelize
 db.Sequelize = Sequelize
