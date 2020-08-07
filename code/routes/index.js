@@ -1,5 +1,5 @@
-const volcanoRoute = require("./volcanoRoute");
+const eruptionRoute = require("./eruptionRoute");
 
 module.exports = {
-    volcanoRoute
+    eruptionRoute
 };

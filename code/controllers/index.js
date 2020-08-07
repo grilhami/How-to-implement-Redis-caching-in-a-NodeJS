@@ -1,7 +1,7 @@
 // import controllers here
-const volcanoC = require('./volcanoController');
+const eruptionC = require('./eruptionController');
 
 // export controllers here
 module.exports = {
-    volcanoC
+   eruptionC
 };
