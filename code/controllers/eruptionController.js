@@ -1,12 +1,19 @@
-const { eruption } = require('../models');
+const { EruptionService } = require('../services');
+const EruptionServiceObj = new EruptionService();
 
 
 module.exports = {
     getEruptions: (req, res) => {
-        eruption.findAll().then(result => 
-            res.status(200).send({message: "Get Erruptions", result})
-        ).catch(err => 
-            res.status(500).send({message: "Server Error", error: err.message})
-        )
+        EruptionServiceObj.get().then(result => {
+            return res.status(200).json({
+                message: "Get All Eruptions",
+                result
+            })
+        }).catch(err => {
+            return res.status(200).json({
+                message: "internal Server Error",
+                error: err.message
+            })
+        })
     }
 };
